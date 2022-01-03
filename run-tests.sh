@@ -1,7 +1,7 @@
 if [ -z "$1" ]; then 
     target="./..."
 else 
-    target=$1
+    target=${@:1}
 fi
 
 docker build -t leetcode . && \
