@@ -4,3 +4,7 @@ This repo is filled with my solutions for leetcode. As of right now, its all gol
 ```
 go test ./...
 ```
+OR
+```
+sh run-tests.sh
+```
