@@ -4,3 +4,9 @@ This repo is filled with my solutions for leetcode. As of right now, its all gol
 ```
 go test ./...
 ```
+OR
+```
+bash run-tests.sh
+```
+
+***run-tests.sh*** takes an optional positional argument where you can specify a directory to test but must be run with bash or another similar shell. For example, ```bash run-tests.sh ./easy/two_sum``` will run the easy/two_sum/two_sum_test.go from the repo's base folder.
