@@ -1,13 +1,19 @@
 package goodPairs
 
+import "fmt"
+
 func NumIdenticalPairs(nums []int) int {
 	var pairs int
-	for i := 0; i < len(nums); i++ {
-		for j := 0; j < len(nums); j++ {
-			if nums[i] == nums[j] && i < j {
-				pairs++
-			}
+	dict := map[int]int{}
+
+	for _, num := range nums {
+		if _, ok := dict[num]; ok {
+			pairs += dict[num]
+			dict[num] += 1
+		} else {
+			dict[num] = 1
 		}
+		fmt.Println(num, dict[num])
 	}
 	return pairs
 }
