@@ -1,5 +1,10 @@
 package listLoops
 
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func HasCycle(head *ListNode) bool {
 
 	if head == nil || head.Next == nil {
