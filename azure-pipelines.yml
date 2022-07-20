@@ -9,8 +9,8 @@ trigger:
 pool: self-hosted agents
 
 steps:
-- task: Go@0
-  inputs:
-    command: 'test'
-    arguments: '-v'
-    workingDirectory: '$(modulePath)'
+- script: |
+    go version
+    go test -v ./...
+  workingDirectory: '$(modulePath)'
+  displayName: Run test cases
