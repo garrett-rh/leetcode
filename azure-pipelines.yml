@@ -9,7 +9,7 @@ trigger:
 pool: self-hosted agents
 
 steps:
-- script: |
-    go version
-    go test -v ./...
-  displayName: Run test cases
+- bash: go version
+  displayName: Display Go Version
+- bash: go test -v ./...
+  displayName: Run Tests
