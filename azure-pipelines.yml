@@ -12,5 +12,4 @@ steps:
 - script: |
     go version
     go test -v ./...
-  workingDirectory: '$(modulePath)'
   displayName: Run test cases
