@@ -5,12 +5,12 @@ trigger:
 
 pool: self-hosted agents
 
-container: golang:latest
 
 stages:
-- stage: Run tests
+- stage: run_tests
   jobs:
     - job: 
+      container: golang:latest
       steps:
       - bash: go version
         displayName: Display Go Version
