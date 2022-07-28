@@ -7,7 +7,7 @@ pool:
   name: self-hosted agents
   demands:
     - docker
-    - Agent.OS -eq Linux
+    - agent.os -equals Linux
 
 
 stages:
