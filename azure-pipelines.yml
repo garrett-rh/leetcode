@@ -8,6 +8,7 @@ pool:
   demands:
     - docker
     - agent.os -equals Linux
+    - agent.name -equal sys76-container
 
 
 stages:
