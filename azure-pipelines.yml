@@ -3,7 +3,11 @@ name: LeetCode Golang Tester
 trigger:
 - main
 
-pool: self-hosted agents
+pool:
+  name: self-hosted agents
+  demands:
+    - docker
+    - Agent.OS -eq Linux
 
 
 stages:
