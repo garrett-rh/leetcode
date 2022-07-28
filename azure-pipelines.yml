@@ -9,11 +9,11 @@ container: golang:latest
 
 stages:
   - stage: Run tests
-  jobs:
-    - job: 
-      steps:
-      - bash: go version
-        displayName: Display Go Version
-      - bash: go test -v ./...
-        displayName: Run Tests
-      displayName: Run test cases
+    jobs:
+      - job: 
+        steps:
+        - bash: go version
+          displayName: Display Go Version
+        - bash: go test -v ./...
+          displayName: Run Tests
+        displayName: Run test cases
