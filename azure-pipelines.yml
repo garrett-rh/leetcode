@@ -19,12 +19,11 @@ stages:
       displayName: Run test cases
 
 - stage: publish_test_coverage
+  dependsOn: []
   jobs:
     - job: 
       container: golang:latest
       steps:
         - bash: go tool cover -func=coverage.out
           displayName: Get test coverage
-        - bash: go tool cover -html=coverage.out
-          displayName: Display go test coverage
       displayName: Display test coverage
