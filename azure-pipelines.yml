@@ -8,12 +8,12 @@ pool: self-hosted agents
 container: golang:latest
 
 stages:
-  - stage: Run tests
-    jobs:
-      - job: 
-        steps:
-        - bash: go version
-          displayName: Display Go Version
-        - bash: go test -v ./...
-          displayName: Run Tests
-        displayName: Run test cases
+- stage: Run tests
+  jobs:
+    - job: 
+      steps:
+      - bash: go version
+        displayName: Display Go Version
+      - bash: go test -v ./...
+        displayName: Run Tests
+      displayName: Run test cases
