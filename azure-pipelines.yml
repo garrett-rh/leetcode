@@ -27,6 +27,6 @@ stages:
     - job: 
       container: golang:latest
       steps:
-        - bash: go test -cover ./...
+        - bash: go test -coverprofile=cover.out ./...
           displayName: generate coverage
       displayName: Display test coverage
