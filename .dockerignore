@@ -1,6 +1,4 @@
 README.md
-run-tests.sh
 Dockerfile
 .dockerignore
-.git
-
+.git*

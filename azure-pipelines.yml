@@ -11,22 +11,28 @@ pool:
 
 stages:
 - stage: run_tests
+  displayName: Run go tests
   jobs:
     - job: 
-      container: golang:latest
       steps:
-      - bash: go version
-        displayName: Display Go Version
-      - bash: go test -v ./...
+      - bash: make test
         displayName: Run Tests
-      displayName: Run test cases
 
-- stage: publish_test_coverage
+- stage: run_coverage
+  displayName: Display test coverage
   dependsOn: []
   jobs:
-    - job: 
-      container: golang:latest
-      steps:
-        - bash: go test -coverprofile=cover.out ./...
-          displayName: generate coverage
-      displayName: Display test coverage
+  - job:
+    steps:
+    - bash: make cover
+      displayName: Generate Coverage
+
+- stage: run_linter
+  displayName: Lint code
+  dependsOn: []
+  jobs:
+  - job: 
+    steps:
+    - bash: make lint
+    displayName: Run linter
+
