@@ -16,7 +16,7 @@ func TestSingleNumber(t *testing.T) {
 	}
 
 	for _, test := range testCases {
-		t.Run(fmt.Sprintf("FInd the unique number in %v", test.nums), func(t *testing.T) {
+		t.Run(fmt.Sprintf("Find the unique number in %v", test.nums), func(t *testing.T) {
 			got := SingleNumber(test.nums)
 
 			if got != test.want {
